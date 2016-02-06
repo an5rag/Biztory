@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Including JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--Including Scroll Reveal-->
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+
+
+    <!--&lt;!&ndash;Including High Charts&ndash;&gt;-->
+    <!--<script src="http://code.highcharts.com/highcharts.js"></script>-->
+
+    <!--&lt;!&ndash;Including Dygraphs&ndash;&gt;-->
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>-->
+
+    <!--Including Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Playfair+Display|Poiret+One' rel='stylesheet'
+          type='text/css'>
+
+    <!--Including scrollreveal-->
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+
+    <!--Including type-it-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/typeit.css') }}">
+    <script src="{{ url_for('static', filename='js/typeit.js') }}"></script>
+
+    <!--Including animate.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+
+    <!--Including custom javascript-->
+    <script src="{{ url_for('static', filename='js/landing-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+
+
+    <!--Including custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing-style.css') }}">
+
+
+    <title>Biztory</title>
+</head>
+
+
+<body>
+<!--NAVIGATION ICONS-->
+<ul class="min-navbar" style="z-index:999;">
+    <!--TOP ICON-->
+    <li><a href='#first' class="nav-custom"><i class="fa fa-search"></i></a></li>
+    <!--RANDOM ICON-->
+    <li><a href="#" class="nav-custom"> <i class="fa fa-random"></i> </a></li>
+</ul>
+<!--------------------------------->
+
+
+<div class="full-page-container" id="first">
+
+    <div class="logo-container animated fadeInDown">
+        <i class="fa fa-building" style="color: indianred;"></i>
+    </div>
+
+    <div class="title">
+        <h1>
+            <p id="title-text"></p>
+
+            </span>
+        </h1>
+
+    </div>
+    <script>
+        $('#title-text').typeIt({
+            whatToType: ["business history", "biz history", "biztory."],
+            breakLines: false,
+            typeSpeed: 100
+        }, function () {
+            $('.min-navbar').fadeIn(2000);
+            $('.scroll-down').fadeIn(2000);
+            $('#search-box').fadeIn(2000);
+        });
+
+    </script>
+
+
+    <div id="subtitle">
+        <p>
+            Businesses were not reviewed in a day.
+        </p>
+    </div>
+    {#----------------------- SEARCH FORM-------------------------------- #}
+    <div id="search-box">
+        <form id="search-form">
+            <i class="fa fa-search"> </i>
+            <input type="text" name="search-string" id="search-text" placeholder="McDonalds, random..">
+        </form>
+    </div>
+    <script>
+        $("#search-form").submit(function (event) {
+            event.preventDefault();
+            $.getJSON("/getJson", function (data) {
+                var items = [];
+                alert("Will work on this later.");
+                for (var i = 0; i < data.length; i++) {
+                    var business = data[i];
+
+                }
+
+            });
+        });
+    </script>
+
+    <a href="#second">
+        <div class="scroll-down animated infinite fadeInDown">
+            <i class="fa fa-chevron-down" style="color: indianred;"></i>
+
+        </div>
+    </a>
+</div>
+<!--EXPLANATION START -->
+<div id="second" class="full-page-container">
+    <div id="second-text">
+        <h2>
+            So.
+        </h2>
+
+        <p>
+            You're probably here because you're not sure what this is all about. <br>
+            We gotchu.
+        </p>
+
+        <div id="second-chart"></div>
+    </div>
+    <!--<a href="#third">-->
+    <!--<div class="scroll-down animated infinite fadeInDown">-->
+    <!--<i class="fa fa-chevron-down" style="color: indianred;"></i>-->
+
+    <!--</div>-->
+    <!--</a>-->
+</div>
+<!--For loading animation-->
+<div class="modal"><!-- Place at bottom of page --></div>
+</body>
+</html>

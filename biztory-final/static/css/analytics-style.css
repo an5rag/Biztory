@@ -1,0 +1,148 @@
+* {
+    border-radius: 0 !important;
+}
+
+#top-icon {
+    color: indianred;
+    transition: color 0.3s ease 0s;
+}
+#top-icon:hover{
+    color: darkseagreen;
+}
+.brand-top {
+    /*margin-top: 5px;*/
+    text-align: center;
+    background: #DAD8D8; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#DAD8D8, white); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#DAD8D8, white); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#DAD8D8, white); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#DAD8D8, white); /* Standard syntax */
+    padding-top:7px;
+
+}
+
+.title {
+    font-size: 350%;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/*Styling the chart*/
+#chart-1 {
+     width: 90%;
+     height: 350px;
+     margin: 0 auto
+ }
+#chart-2, #chart-3 {
+
+    padding:0px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    padding: 0;
+}
+
+
+
+/*Designing the texts*/
+.business-title {
+    text-align: center;
+}
+
+/*Designing the layout*/
+#left-side {
+    margin-top: 4%;
+    padding-left: 25px;
+    padding-right: 25px;
+    max-height: calc(100vh - 140px);
+    overflow: hidden;
+}
+
+/*Designing the card*/
+
+.business-card{
+
+    height: 610px;
+    width: 350px;
+    /*border:0.2px solid black;*/
+    /*border-radius: 25px;*/
+    background-color: black;
+    box-shadow: 5px 5px 5px lightgrey;
+    margin-top: 15px;
+}
+#card-photo-container {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+#business-name-holder {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Slabo 27px', serif;
+    color: lightgrey;
+
+    /*letter-spacing: -1px;*/
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+#business-address{
+    font-size: 17px;
+    line-height: 1px;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+}
+#card-photo{
+
+    width:100%;
+    height: auto;
+}
+#card-stars, #card-dollars, #card-reviews{
+    height: 100px;
+    text-align: center;
+    font-family: 'Slabo 27px', serif;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+#card-stars,#card-dollars{
+    background-color: #D0CDCD;
+
+}
+#card-reviews{
+    background-color: #B0AFAF;
+}
+
+
+
+#card-yelp-box{
+    margin-top: 35px;
+
+}
+
+#card-yelp-link{
+    height: 40px;
+    width: 60%;
+    border: 3px solid white;
+
+    color: whitesmoke;
+    padding: 2px;
+    display: flex;
+
+}

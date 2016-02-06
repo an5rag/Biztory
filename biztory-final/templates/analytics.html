@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Including JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!--Including bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <!--Including Scroll Reveal-->
+    <!--<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>-->
+
+
+    <!--Including High Charts-->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    <!--Including Dygraphs-->
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/dygraph/1.1.1/dygraph-combined.js"></script>-->
+
+    <!--Including Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Source+Sans+Pro|Poiret+One' rel='stylesheet'
+          type='text/css'>
+
+    <!--Including scrollreveal-->
+    <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+
+    <!--Including type-it-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/typeit.css') }}">
+    <script src="{{ url_for('static', filename='js/typeit.js') }}"></script>
+
+    <!--Including animate.css-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}">
+
+    <!--Including custom javascript-->
+    <script src="{{ url_for('static', filename='js/analytics-script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+
+
+    <!--Including custom CSS-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/analytics-style.css') }}">
+    <title>Analytics</title>
+</head>
+<body>
+<!--Drawing the fixed grey border-->
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+<!--------------------------------->
+<div class="row" style="margin: 0">
+    <div class="col-sm-12" style="padding: 0px;">
+
+        <div class="brand-top">
+            <a class="title" style="text-decoration: none;" href="#">
+                <i id="top-icon" class="fa fa-building"></i> biztory</a>
+        </div>
+
+
+    </div>
+
+</div>
+
+<!--NAVIGATION ICONS-->
+<!--<ul class="min-navbar" style="z-index:999;">-->
+<!--&lt;!&ndash;TOP ICON&ndash;&gt;-->
+<!--<li><a href='#first' class="nav-custom"><i class="fa fa-search"></i></a></li>-->
+<!--&lt;!&ndash;GITHUB LINK&ndash;&gt;-->
+<!--<li><a href="#" class="nav-custom"> <i class="fa fa-github-alt"></i></a></li>-->
+<!--</ul>-->
+<!--------------------------------->
+<div class="row" style="margin: 0">
+    <div class="col-md-8" id="left-side">
+        <div class="center-box">
+            <div id="chart-1" style="z-index: 99; height: 300px">
+
+            </div>
+            <span id="chart-2">
+
+            </span>
+            <!--<span id="chart-3">-->
+
+            <!--</span>-->
+
+        </div>
+
+
+    </div>
+    <div class="col-md-4" id="right-side">
+        <div class="center-box">
+            <div class="business-card">
+                <div id="card-photo-container">
+                    <img id="card-photo" src="http://www.gffoodservice.org/wp-content/uploads/2015/03/restaurant.jpg"/>
+
+                    <p id="business-name-holder"><span id="business-name">Old Time Meat & Deli Shoppe</span><br><span
+                            id="business-address">2018 S Neil St<br>Champaign, IL 61820</span></p>
+                </div>
+                <div class="row" id="card-numbers" style="margin: 0px">
+                    <div class="col-xs-4" id="card-stars" class="center-box">
+                        <p>
+                            <span id="avg_stars">3.5</span>
+                        </p>
+
+                        <p style="font-size: 20px; color:#4B4A4A;">
+                            stars.
+                        </p>
+                    </div>
+                    <div class="col-xs-4" id="card-reviews" class="center-box">
+                        <p>
+                            <span id="tot_reviews">203</span>
+                        </p>
+
+                        <p style="font-size: 20px; color:#4B4A4A;">
+                            reviews.
+                        </p>
+                    </div>
+                    <div class="col-xs-4" id="card-dollars" class="center-box">
+                        <p>
+                            <span id="tot_checkins">1028</span>
+                        </p>
+
+                        <p style="font-size: 20px; color:#4B4A4A;">
+                            check-ins.
+                        </p>
+                    </div>
+
+                </div>
+                <iframe
+                        id="google-maps-iframe"
+                        style="width: 100%; height: 100px"
+                        frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBiuoXFAcE_iGIN6rMXR-kLUQNRprmD3v8&q=40.6892,-74.0444&amp;"
+                        allowfullscreen>
+                </iframe>
+
+
+                <div id="card-yelp-box" class="center-box">
+                    <div id="card-yelp-link" class="center-box">
+                        <div style="margin-top: 5px">
+                            <p>
+                                <i class="fa fa-yelp" style="color: indianred"></i> SEE ON YELP
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--For loading animation-->
+<div class="modal"><!-- Place at bottom of page --></div>
+<script>
+
+</script>
+</body>
+</html>

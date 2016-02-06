@@ -1,0 +1,64 @@
+body{
+    /*background: cornflowerblue;*/
+    background-attachment: fixed;
+    background-image:url('http://www.4ourcreativearts.com/images/vignette.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+/*For containing the logo*/
+.logo-container {
+    margin:-20px;
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    border: 2px solid lightgrey;
+    padding: 20px;
+    /*background-color: azure;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    font-size: 500%;
+
+}
+
+.title
+{
+    font-size: 200%;
+    margin-top: -35px;
+    padding: 0px;
+
+
+}
+
+
+#subtitle
+{
+    color: slategrey;
+    font-family: 'Playfair Display', serif;
+    font-size: 100%;
+    margin-top: -65px;
+
+}
+#search-box{
+    margin:2px;
+    display: none;
+}
+
+/*For the mini navigation buttons*/
+.min-navbar {
+    display: none;
+}
+
+#search-text{
+    background-color: transparent;
+    font-size: 100%;
+    padding-bottom: 4px;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: indianred;
+}

@@ -1,0 +1,166 @@
+body
+{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.title {
+    font-family: 'Poiret One', cursive;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
+
+a{
+    transition: color 0.3s ease 0s;
+}
+/* unvisited link */
+a:link {
+    color: black;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+
+/* mouse over link */
+a:hover {
+    color: grey;
+}
+
+/* selected link */
+a:active {
+    color: indianred;
+}
+/*For the mini navigation buttons*/
+.min-navbar {
+    font-size:200%;
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top: 5%;
+    right: 15px;
+
+}
+.scroll-down{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+
+}
+/*For each page-length section*/
+.full-page-container {
+    min-height: 100vh;
+    /*background-color: azure;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    /*overflow: visible;*/
+}
+
+
+
+li {
+    float: left;
+}
+
+li {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Scroll down icon*/
+
+.scroll-down {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    display: none;
+    /*border: 3px solid #8AC007;*/
+}
+
+
+/*Styling the border*/
+#top, #bottom, #left, #right {
+    background-color: indianred;
+    position: fixed;
+    z-index: 999;
+}
+
+#left, #right {
+    top: 0;
+    bottom: 0;
+    width: 2px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top, #bottom {
+    left: 0;
+    right: 0;
+    height: 2px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
+}
+/*For the loading animation*/
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('http://i.stack.imgur.com/FhHRx.gif')
+    50% 50%
+    no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
